@@ -1,9 +1,4 @@
-name: Jess Wang
+first_name: Jess
 studentNumber: BVN
-officialEmail: jess_ywang@hotmail.com
-contactEmail: # don't write on this line
-  firstBit: jess_ywang # this avoids spam, the @ is implied
-  otherBit: hotmail.com
-# accounts
 stackOverflowLink: https://stackoverflow.com/users/19024488/jeywang
 github: jeywang
