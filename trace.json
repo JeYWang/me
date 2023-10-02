@@ -52,7 +52,7 @@
   },
   {
     "of_total": 34,
-    "mark": 20,
+    "mark": 26,
     "results": [
       {
         "value": 1,
@@ -135,27 +135,27 @@
         "name": "Exercise 2: debug the file"
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise 3: is_odd - is 2 odd"
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise 3: is_odd - is 5 odd"
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise 3: fix_it - it moves, and it should  move"
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise 3: fix_it - it moves, and it should not move"
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise 3: fix_it - it does not move, and it should  move"
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise 3: fix_it - it does not move, and it should not move"
       },
       {
