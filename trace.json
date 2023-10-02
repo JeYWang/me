@@ -52,7 +52,7 @@
   },
   {
     "of_total": 34,
-    "mark": 19,
+    "mark": 20,
     "results": [
       {
         "value": 1,
@@ -131,7 +131,7 @@
         "name": "Exercise 0: shout_with_a_number - hi, 1 => HI 1"
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise 2: debug the file"
       },
       {
