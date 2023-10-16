@@ -16,11 +16,10 @@ def is_odd(a_number):
 def fix_it(moves=True, should_move=True):
     if moves == should_move:
         return "No Problem"
-    else:
-        if moves == True:
-            return "Duct Tape"
-        else: 
-            return "WD-40"
+    elif moves == True:
+        return "Duct Tape"
+    else: 
+        return "WD-40"
     """Decide what to do.
 
     Using the engineering flowchart (in week2 folder of the CODE1161-2019
@@ -34,32 +33,34 @@ def fix_it(moves=True, should_move=True):
     Most people write this function with 4 return statements. 
     As an extra challenge, see if you can get that down to three.
     """
-    return None
 
 
 def loops_1a():
     """Make 10 stars.
-
     Using a for loop
     return a list of 10 items, each one a string with exacly one star in it.
     E.g.: ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
     """
-    return None
+    star_total = []
+    for x in range(10):
+        star_total.append('*')
+    return star_total
 
 
 def loops_1c(number_of_items=5, symbol="#"):
     """Respond to variables.
-
     Using any method, return a list of number_of_items items, each one a
     string with exacly one symbol in it.
     E.g.: ['#', '#', '#', '#', '#']
     """
-    return None
+    loop_list = []
+    for x in range(number_of_items+1):
+        loop_list.append(str(symbol))
+    return loop_list
 
 
 def loops_2():
     """Make a big square starfield.
-
     return a list of 10 items, each one a list of 10 items,
     each one of those, a string with exacly one star in it.
     E.g.: [
@@ -73,9 +74,16 @@ def loops_2():
             ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
             ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
             ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
-          ]
+            ]
     """
-    return None
+    star_field = []
+    star_list = []
+    for n in range(10):
+        star_list.append("*")
+    for n in range(10):
+        star_field.append(str(star_list) + "\n")
+    print(star_field)
+    return star_field
 
 
 def loops_3():
@@ -98,13 +106,20 @@ def loops_3():
     So for every step produced by `for i in range(10):` i is a different number
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
-    """
-    return None
+    """ 
+    num_field = []
+    for n in range(10): #for 10 times in this loop with variable n:
+        num_list = []
+        for n in range(10):
+            num_list.append(str(n)) #append variable n as a string, onto num_list
+            n = n + 1  #add 1 to variable n
+        num_field.append(str(num_list)) #append num_list as a string onto num_field, add line break
+    return num_field
+
 
 
 def loops_4():
     """Make a block of numbers that rises left to right.
-
     Return this:
     [
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'],
@@ -119,7 +134,15 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
-    return None
+    num_field2 = []
+    for n in range(10): #for 10 times in this loop with variable n:
+        num_list2 = []
+        for n in range(10):
+            n = n - 1
+            num_list2.append(str(n+1)) #append variable n as a string, onto num_list
+        num_field2.append(str(num_list2)) #append num_list as a string onto num_field, add line break
+    return num_field2
+
 
 
 def loops_5():
