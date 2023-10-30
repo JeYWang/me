@@ -52,7 +52,7 @@
   },
   {
     "of_total": 35,
-    "mark": 29,
+    "mark": 31,
     "results": [
       {
         "value": 1,
@@ -171,7 +171,7 @@
         "name": "Exercise 3: loops_2 - 10\u00d710 stars"
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise 3: loops_3 - 10 matching lists"
       },
       {
@@ -179,7 +179,7 @@
         "name": "Exercise 3: loops_4 - ten rising lists"
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise 3: loops_5 - write the coords"
       },
       {

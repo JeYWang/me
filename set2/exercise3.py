@@ -174,7 +174,7 @@ def loops_5():
     for n in range(10):
         coordinates = []
         for i in range(5):
-            coordinates.append("i" + str(n) + "," + "j" + str(i))
+            coordinates.append("(" + "i" + str(n) + ", " + "j" + str(i) + ")")
         field_coordinates.append(coordinates)
         n = n + 1
     return field_coordinates
@@ -199,7 +199,18 @@ def loops_6():
     You can use a variable.
     TIP: look out for the starting condition.
     """
-    return None
+    num_wedge = []
+    n = 1
+    for n in range(11):
+        num_list = []
+        for x in range(n):
+            num_list.append(str(x))
+        num_wedge.append(num_list)
+        n = n + 1
+    return num_wedge
+
+
+
 
 
 def loops_7():
@@ -223,7 +234,25 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
-    return None
+    tree_height = 5
+    tree_width = tree_height * 2 - 1
+    tree_centre = (tree_width + 1) / 2
+    make_a_tree = []
+    Bound_Lower = tree_centre
+    Bound_Upper = tree_centre
+    for h in range(tree_height):
+        tree_row = []
+        for w in range(tree_width):
+            if w in range(Lower, Upper):
+                tree_row.append("*")
+            else:
+                tree_row.append(" ")
+            Bound_Lower = Bound_Lower - 1
+            Bound_Upper = Bound_Upper + 1
+            make_a_tree.append(tree_row)
+    return make_a_tree
+
+
 
 
 def little_printer(some_kind_of_list, exercise_name):
