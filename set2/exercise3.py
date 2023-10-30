@@ -81,14 +81,12 @@ def loops_2():
     for n in range(10):
         star_list.append("*")
     for n in range(10):
-        star_field.append(str(star_list) + "\n")
-    print(star_field)
+        star_field.append(star_list)
     return star_field
 
 
 def loops_3():
     """Make a rising block of numbers.
-
     Return this:
     [
         ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0'],
@@ -108,12 +106,12 @@ def loops_3():
          so call str(number) to cast.
     """ 
     num_field = []
-    for n in range(10): #for 10 times in this loop with variable n:
+    for n in range(10):
         num_list = []
-        for n in range(10):
-            num_list.append(str(n)) #append variable n as a string, onto num_list
-            n = n + 1  #add 1 to variable n
-        num_field.append(str(num_list)) #append num_list as a string onto num_field, add line break
+        for x in range(10):
+            num_list.append(str(n))
+        num_field.append(num_list)
+        n = n + 1
     return num_field
 
 
@@ -134,14 +132,15 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
-    num_field2 = []
+    num_field = []
     for n in range(10): #for 10 times in this loop with variable n:
-        num_list2 = []
+        num_list = []
         for n in range(10):
-            n = n - 1
-            num_list2.append(str(n+1)) #append variable n as a string, onto num_list
-        num_field2.append(str(num_list2)) #append num_list as a string onto num_field, add line break
-    return num_field2
+            num_list.append(str(n)) #append variable n as a string, onto num_list
+        num_field.append(num_list) #append num_list as a string onto num_field, add line break
+        n = n + 1 #add 1 to variable n
+    return num_field
+
 
 
 
@@ -169,8 +168,16 @@ def loops_5():
         "There are {} green bottles".format(8)
     you'll come to see the pros and cons of each over time.
     """
-    return None
-
+# the {} is a placeholder item, which .format(x) can insert "x" into
+# use placeholder for j0, and generate i0 first.
+    field_coordinates = []
+    for n in range(10):
+        coordinates = []
+        for i in range(5):
+            coordinates.append("i" + str(n) + "," + "j" + str(i))
+        field_coordinates.append(coordinates)
+        n = n + 1
+    return field_coordinates
 
 def loops_6():
     """Make a wedge of numbers.
