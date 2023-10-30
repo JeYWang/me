@@ -235,11 +235,11 @@ def loops_7():
     lots of diagrams!
     """
     tree_height = 5
-    tree_width = tree_height * 2 - 1
-    tree_centre = (tree_width + 1) / 2
+    tree_width = int(tree_height * 2 - 1)
+    tree_centre = int(tree_height - 1)
     make_a_tree = []
-    Bound_Lower = tree_centre
-    Bound_Upper = tree_centre
+    Lower = tree_centre
+    Upper = tree_centre
     for h in range(tree_height):
         tree_row = []
         for w in range(tree_width):
@@ -247,9 +247,9 @@ def loops_7():
                 tree_row.append("*")
             else:
                 tree_row.append(" ")
-            Bound_Lower = Bound_Lower - 1
-            Bound_Upper = Bound_Upper + 1
-            make_a_tree.append(tree_row)
+        make_a_tree.append(tree_row)
+        Lower = Lower - 1
+        Upper = Upper + 1
     return make_a_tree
 
 
