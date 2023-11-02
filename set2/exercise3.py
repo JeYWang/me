@@ -18,7 +18,7 @@ def fix_it(moves=True, should_move=True):
         return "No Problem"
     elif moves == True:
         return "Duct Tape"
-    else: 
+    else:
         return "WD-40"
     """Decide what to do.
 
@@ -43,7 +43,7 @@ def loops_1a():
     """
     star_total = []
     for x in range(10):
-        star_total.append('*')
+        star_total.append("*")
     return star_total
 
 
@@ -54,7 +54,7 @@ def loops_1c(number_of_items=5, symbol="#"):
     E.g.: ['#', '#', '#', '#', '#']
     """
     loop_list = []
-    for x in range(number_of_items+1):
+    for x in range(number_of_items):
         loop_list.append(str(symbol))
     return loop_list
 
@@ -104,16 +104,14 @@ def loops_3():
     So for every step produced by `for i in range(10):` i is a different number
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
-    """ 
+    """
     num_field = []
     for n in range(10):
         num_list = []
-        for x in range(10):
+        for _ in range(10):
             num_list.append(str(n))
         num_field.append(num_list)
-        n = n + 1
     return num_field
-
 
 
 def loops_4():
@@ -133,15 +131,14 @@ def loops_4():
     ]
     """
     num_field = []
-    for n in range(10): #for 10 times in this loop with variable n:
+    for n in range(10):  # for 10 times in this loop with variable n:
         num_list = []
-        for n in range(10):
-            num_list.append(str(n)) #append variable n as a string, onto num_list
-        num_field.append(num_list) #append num_list as a string onto num_field, add line break
-        n = n + 1 #add 1 to variable n
+        for x in range(10):
+            num_list.append(str(x))  # append variable n as a string, onto num_list
+        num_field.append(
+            num_list
+        )  # append num_list as a string onto num_field, add line break
     return num_field
-
-
 
 
 def loops_5():
@@ -168,16 +165,19 @@ def loops_5():
         "There are {} green bottles".format(8)
     you'll come to see the pros and cons of each over time.
     """
-# the {} is a placeholder item, which .format(x) can insert "x" into
-# use placeholder for j0, and generate i0 first.
+    # the {} is a placeholder item, which .format(x) can insert "x" into
+    # use placeholder for j0, and generate i0 first.
     field_coordinates = []
-    for n in range(10):
+    for i_value in range(10):
         coordinates = []
-        for i in range(5):
-            coordinates.append("(" + "i" + str(n) + ", " + "j" + str(i) + ")")
+        for j_value in range(5):
+            # coordinates.append("(" + "i" + str(i_value) + ", " + "j" + str(j_value) + ")")
+            # coordinates.append("(i{0}, j{1})".format(i_value, j_value))
+            coordinates.append(f"(i{i_value}, j{j_value})")
         field_coordinates.append(coordinates)
-        n = n + 1
+
     return field_coordinates
+
 
 def loops_6():
     """Make a wedge of numbers.
@@ -200,17 +200,14 @@ def loops_6():
     TIP: look out for the starting condition.
     """
     num_wedge = []
-    n = 1
-    for n in range(11):
+
+    for i in range(1, 11):
         num_list = []
-        for x in range(n):
-            num_list.append(str(x))
+        for j in range(i):
+            num_list.append(str(j))
         num_wedge.append(num_list)
-        n = n + 1
+
     return num_wedge
-
-
-
 
 
 def loops_7():
@@ -238,21 +235,19 @@ def loops_7():
     tree_width = int(tree_height * 2 - 1)
     tree_centre = int(tree_height - 1)
     make_a_tree = []
-    Lower = tree_centre
-    Upper = tree_centre
+    lower = tree_centre
+    upper = tree_centre
     for h in range(tree_height):
         tree_row = []
         for w in range(tree_width):
-            if w in range(Lower, Upper):
+            if lower <= w <= upper:
                 tree_row.append("*")
             else:
                 tree_row.append(" ")
         make_a_tree.append(tree_row)
-        Lower = Lower - 1
-        Upper = Upper + 1
+        lower = lower - 1
+        upper = upper + 1
     return make_a_tree
-
-
 
 
 def little_printer(some_kind_of_list, exercise_name):
