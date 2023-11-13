@@ -49,7 +49,6 @@ def stubborn_asker(low, high):
     i = input()
     while i < low or i > high:
         i = input()
-        continue
     return i
 
 
