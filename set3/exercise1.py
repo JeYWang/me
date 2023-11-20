@@ -76,10 +76,7 @@ def super_asker(low, high):
     amount of code.
     """
     i = input()
-    while range(low, high) == range(
-        not_number_rejector(low), not_number_rejector(high)
-    ) and i == not_number_rejector(i):
-        i = stubborn_asker(low, high)
+    while i == not_number_rejector(i) and low <= i and i <= high:
         return i
 
 
