@@ -42,7 +42,7 @@ def binary_search(low, high, actual_number):
             guessed_number = int(guessed_number / 2)
         elif actual_number > guessed_number:
             tries = tries + 1
-            guessed_number = int((guessed_number + high) * 3)
+            guessed_number = int((guessed_number + high) * 2)
 
 if __name__ == "__main__":
     print(binary_search(1, 100, 5))
