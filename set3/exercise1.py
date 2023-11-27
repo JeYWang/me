@@ -13,10 +13,9 @@ def loop_ranger(start, stop=None, step=1):
     function, but we'd like you to do it the long way, probably using a loop.
     """
     loop_list = []
-    for i in range(start, stop):
-        if start < (stop - step):
-            loop_list.append(i)
-        i = i + step
+    while start <= (stop - step):
+        loop_list.append(start)
+        start = start + step
     return loop_list
 
 
@@ -46,16 +45,12 @@ def stubborn_asker(low, high):
     Look up the docs for input
     """
     # keep asking for an number until it is within range
-    i = input()
-    while i < low or i > high:
-        i = input()
-    return i
-
-
-# why doesnt this work??
-#     i = input()
-#    while low <= i <= high:
-#        return i
+    while True:
+        i = int(input(f"enter a number between {low} and {high}: "))
+        if low <= i <= high:
+            return i
+        else:
+            print(f"soz buddy, {i} is out of range, try again ")
 
 
 def not_number_rejector(message):
@@ -64,8 +59,13 @@ def not_number_rejector(message):
     (e.g. "cow", "six", "8!") then throw it out and ask for an actual number.
     When you do get a number, return it.
     """
-    while message.isnumeric:
-        return message
+    while True:
+        i = input(message)
+        try:
+            number = int(i)
+            return number
+        except ValueError:
+            print(f"soz buddy, {i} isn't a number, try again")
 
 
 def super_asker(low, high):
@@ -75,9 +75,17 @@ def super_asker(low, high):
     Try to call at least one of the other functions to minimise the
     amount of code.
     """
-    i = input()
-    while i == not_number_rejector(i) and low <= i and i <= high:
-        return i
+    while True:
+        if high > low + 1:
+            k = input(f"enter a number between {low} and {high}")
+            try:
+                number = int(k)
+                if low <= number <= high:
+                    return number
+                else:
+                    print(f"soz buddy, {k} is out of range, try again")
+            except ValueError:
+                print(f"soz buddy, {k} isn't a number, try again")
 
 
 if __name__ == "__main__":
