@@ -49,11 +49,10 @@ def advancedGuessingGame():
                 print(f"Oh dear, you do know {k} isn't a number, right?")
 
     lower_bound = avengers_assemble(0, 50000, "How many to make this fight worthwile? ")
-    upper_bound = avengers_assemble(
-        lower_bound + 2, 50000, "How many would be too hard to beat? "
-    )
+    upper_bound = avengers_assemble(lower_bound + 2, 50000, "How many would be too hard to beat? "
+)
     print(f"OK then, a troop sized between {lower_bound} and {upper_bound}? ")
-
+    
     actual_number = random.randint(lower_bound, upper_bound)
 
     while True:
@@ -72,9 +71,7 @@ def advancedGuessingGame():
             guessed_number = print(
                 "Oh dear citizen, our Empire is merciful! There are fewer than you think."
             )
-
     # the tests are looking for the exact string "You got it!". Don't modify that!
-
 
 if __name__ == "__main__":
     print(advancedGuessingGame())
